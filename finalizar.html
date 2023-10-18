@@ -1,12 +1,9 @@
 <html>
     <head>
-        <link type="text/css" rel="stylesheet" href="css/finalizar.css">
+        <link  rel="stylesheet" type="text/css" href="../CleudeStore/css/finalizar.css"/>
         <script defer src="js/finalizar.js"></script>
     </head>
     <body>
-        <navbar>
-
-        </navbar>
 
         <div id="tabela-compras">
             <table border="1">
@@ -23,27 +20,31 @@
             </table>
         </div>
 
-        <div class="opcoes">
-
-            <h3>Opcoes</h3>
-
+        <div class="opcoes-de-pagamento">
             <div class="card">
-                <div class="nome">Cartao de Credito</div>
-                <button type="button">Usar Credito</button>
-            </div>
-
-            <div class="card">
-                <div class="nome">Cartao de Debito/Boleto</div>
-                <div>
-                    <button class="button" type="button">Usar Debito</button>
+                <div class="card-titulo">Cartao de Credito</div>
+    
+                <div class="card-botao">
+                    <button type="button" onclick="asasa">Usar Credito</button>
                 </div>
             </div>
+    
             <div class="card">
-                <div class="nome">Pix</div>
-                <div>
-                    <button class="button" type="button">Usar Pix</button>
+                <div class="card-titulo">Cartao de Debito</div>
+    
+                <div class="card-botao">
+                    <button type="button" onclick="asasa">Usar Debito</button>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-titulo">PIX</div>
+    
+                <div class="card-botao">
+                    <button type="button" onclick="asasa">Usar PIX</button>
                 </div>
             </div>
         </div>
+
     </body>
 </html>
