@@ -1,41 +1,120 @@
-body {
+body{
     margin: 0;
-
+    
+    background-color: #f8e5aa;
+    display: flex;
+    flex-wrap: wrap;
+    
     font-family: 'Abel', sans-serif;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-
-    padding-inline: 2.5%;
+    align-self: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     background-color: #b71a8c;
 
     width: 100%;
-    height: 7.5%;
+    height: 1%;
+
+    color: white;
 
     
 }
 
-
-body{
-    background-color: #f8e5aa;
+.navbar-left, .navbar-right {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-inline: 5%;
+
+    gap: 10%;
 }
-.navbar{
-    width: 100%;
-    background-color: #b71a8c;
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+    font-size: 16;
+
+    gap: 5%;
+}
+
+.logo img {
     height: 40px;
-    margin: 0px;
 }
+
+.navbar-logo-text {
+    white-space: nowrap; 
+}
+
+.dropdown {
+
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown .dropbtn {
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: rgb(165, 0, 115);
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(209, 0, 157);
+}
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .title{
     display: flex;
     justify-content: center;
     font-size: 30px;
     color: #f8e5aa;
 }
+
 .background-reference{
     display: flex;
     width: 100%;
@@ -56,6 +135,7 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
+
 .products{
     width: 70%;
     height: 100px;
@@ -65,6 +145,7 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+
 .img-space{
     height: 100%;
     width: 30%;
@@ -73,29 +154,35 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 .product-name{
     width: 30%;
     padding: 5%;
 }
+
 .price{
     padding: 5%;
 }
+
 .remove{
     width: 10%;
     height: 100%;
     display: flex;
     align-items: center
 }
+
 .img-remove{
     width: 100%;
     height: auto;
     
     
 }
+
 .img-product{
     width: auto;
     height: 100%;
 }
+
 .finish{
     display: flex;
     align-content: center;
@@ -108,19 +195,22 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .finish:hover{
     background-color: #4CAF50; /* Green */
     color: white;
     cursor:grab;
     cursor: pointer;
 }
+
 @media (max-width:600px){
+
 .card{
     width: 100%;
 }
+
 .products{
     width: 100%;
 }
 
-    
 }
