@@ -1,0 +1,2 @@
+Cor principal (roxo): #b71a8c
+Cor secundária (fundo): #f8e5aa
