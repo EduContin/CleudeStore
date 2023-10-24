@@ -31,6 +31,9 @@
     height: 80%;
     background-color:coral ;
 
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +46,9 @@
     display: flex;
     align-items:center;
     justify-content: space-around;
+
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
 
 }
 
@@ -87,6 +93,9 @@
     height: 80%;
     background-color: aqua;
 
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+
     display: flex;
     justify-content: center;
     align-items:center;
@@ -102,6 +111,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
 }
 
 .botao-pagar {
