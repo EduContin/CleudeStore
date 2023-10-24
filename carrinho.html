@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
+    <script defer src="js/carrinho.js"></script>
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/carrinho.css">
 </head>
 <body>
     <nav class="navbar">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="search">
-                <input type="text" placeholder="Pesquise um produto">
+               
             </div>
         </div>
         <div class="navbar-right">
@@ -33,28 +33,16 @@
                 </div>
             </div>
         </div>
-
     </nav>
     <div class="background-reference">
-        <div class="card">
-            <div class="products">
+        <div class="card" id="card">
+            <div id="card-produtos" class="card-produtos"></div>
 
-            </div>
-            <div class="products">
-                <div class="img-space"><img src="https://http2.mlstatic.com/D_NQ_NP_675217-MLB46858519762_072021-O.webp"class="img-product"></div>
-                <div class="product-name">JOAO CARLOS ROBERTO AUGUSTO</div>
-                <div class="price">R$:999,99</div>
-
-                <div class="remove"><img src="img/delete.png" alt="aaaaaaaaa" class="img-remove"></div>    
-            </div>
-            <div class="products">
-
-            </div>
-        
             <div class="finish">
                 FINALIZAR
             </div>
         </div>
+
     </div>
 </body>
 </html>
