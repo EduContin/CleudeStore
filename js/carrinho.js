@@ -21,3 +21,10 @@ window.onload =  async function () {
         document.getElementById("card-produtos").innerHTML += card;
     }
 }
+async function deletar(id){
+    
+    var resposta = await fetch('php/getcarrinho.php',{
+        method:"POST",
+        id
+    });
+}
