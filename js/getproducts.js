@@ -1,26 +1,33 @@
 
-// window.onload = async function () {
+window.onload = async function () {
 
-//     var resultado = await fetch("php/getproducts.php", {
-//         method: "GET"
-//     });
+    var resultado = await fetch("php/getproducts.php", {
+        method: "GET"
+    });
 
-//     var dados = await resultado.json();
+    var dados = await resultado.json();
 
-//     console.log(resultado)
+    console.log(resultado)
     
-//     for (var i = 0; i < dados.length; i++ ) {
+    for (var i = 0; i < dados.length; i++ ) {
 
-//         var conteudo =
-//         `<div class="card">
-//         <div class="card-imagem">
-//             <img src="https://cdn-icons-png.flaticon.com/512/1384/1384033.png" width="30px" alt="">
-//         </div>
-//         <div class="card-titulo">${dados[i].nome}</div>
-//         <div class="card-botao"><button>Adicionar ao Carrinho</button></div>
-//         </div>`;
+        var conteudo =
+        `<div id="produtos" class="produtos">
+        <div class="produto">
+            <div class="produto-info">
+                <div class="produto-nome">
+                    <h2>Kit Crochê</h2>
+                </div>
+                <img class="produto-info" src="img/produtos/kitcroche.webp">
+                <div class="produto-valor">
+                    <h4>R$40.00</h4>
+                </div>                
+            </div>
+            <button class="produto-botao">Adicionar ao Carrinho</button>
+        </div>
+    </div>`;
     
-//         document.getElementById("produtos").innerHTML += conteudo;
+        document.getElementById("produtos").innerHTML += conteudo;
     
-//     }
-// }
+    }
+}
