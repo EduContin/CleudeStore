@@ -1,10 +1,3 @@
-//function credito() {
-//   var conteudo = ``
-//
-//    var conteudo = ``
-<<<<<<< HEAD
-//}
-
 /*Ambas as funcoes credito_cartao e 
 debito_cartao validarao se sera usado
 o icone de mastercard ou visa*/
@@ -264,6 +257,3 @@ function pix() {
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
 
 }
-=======
-//}
->>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
