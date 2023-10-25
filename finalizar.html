@@ -4,6 +4,7 @@
         <link  rel="stylesheet" type="text/css" href="../CleudeStore/css/finalizar.css"/>
         <script defer src="js/finalizar.js"></script>
         <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/fontawesome-free-web/css/all.css"/>
     </head>
     <body>
         <nav class="navbar">
@@ -34,7 +35,6 @@
     
         </nav>
 
-
         <div class="container">
 
 
@@ -47,6 +47,22 @@
                         <button class="botao-opcoes-pagamento" type="button" onclick="credito()">Credito</button>
 
                         <button class="botao-opcoes-pagamento" type="button" onclick="debito()">Debito</button>
+        <div class="containers">
+
+            <div class="container-esquerda">
+
+                <div class="container-esquerda-pagamento">
+
+                    <div id="tipo-pagamento">
+                        <div class="metodo-pagamento">
+                            Escolha um dos 3 metodos abaixo<br>
+                             para efetuar o seu pagamento</div>
+                    </div>
+
+                    <div class="botoes">
+                        <button class="botao-opcoes-pagamento" type="button" onclick="credito_cartao()">Credito</button>
+
+                        <button class="botao-opcoes-pagamento" type="button" onclick="debito_cartao()">Debito</button>
     
                         <button class="botao-opcoes-pagamento" type="button" onclick="pix()">Pix</button>
                     </div>
