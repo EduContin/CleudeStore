@@ -60,45 +60,44 @@ function credito() {
     `<div class="titulo-pagamento">
         <h3 style="color:white;">Dados do titular do cartao</h3>
     </div>
-    <div class="container">
+    <form id="formulario" class="container">
+            <label class="label">Numero do Cartao
+                ${tipo_cartao[resultado-1]}
+                <input name="num_cartao" class="input" type="text" required/>
+            </label>
 
-        <label class="label">Numero do Cartao
-            ${tipo_cartao[resultado-1]}
-            <input class="input" type="text" required/>
-        </label>
+            <label class="label">CPF
+                <input name="cpf" class="input" type="text" required/>
+            </label>                     
 
-        <label class="label">CPF
-            <input class="input" type="text" required/>
-        </label>                     
+            <label class="label">Nome Completo
+                <input name="nome" class="input" type="text" required/>
+            </label>    
 
-        <label class="label">Nome Completo
-            <input class="input" type="text" required/>
-        </label>    
+            <label class="label">Data de nascimento
+                <input name="data_nasc" class="input" type="date" required/>
+            </label>
 
-        <label class="label">Data de nascimento
-            <input class="input" type="date" required/>
-        </label>
+            <label class="label">Validade
+                    <input name="validade" class="input" type="date" required/>
+            </label>
 
-        <label class="label">Validade
-                <input class="input" type="date"/>
-        </label>
-
-        <label class="label">Codigo de Seguranca
-            <input class="input" type="text"/>
-        </label>                     
-          
-        <label class="label">Telefone
-            <input class="input" type="text"/>
-        </label>
-                                        
-        <label class="label">Parcelas
-            <select class="input" name="parcelas">
-                <option value="1" selected>1x de R$... sem juros</option>
-                <option value="2" >2x de R$... sem juros</option>
-                <option value="3" >3x de R$... sem juros</option>
-            </select>
-        </label>                
-    </div>`;
+            <label class="label">Codigo de Seguranca
+                <input name="cod_segu" class="input" type="text" required/>
+            </label>                     
+            
+            <label class="label">Telefone
+                <input name="telefone" class="input" type="text" required/>
+            </label>
+                                            
+            <label class="label">Parcelas
+                <select class="input" name="parcelas">
+                    <option value="1" selected>1x de R$... sem juros</option>
+                    <option value="2" >2x de R$... sem juros</option>
+                    <option value="3" >3x de R$... sem juros</option>
+                </select>
+            </label>            
+    </form>`;
 
     document.getElementById('tipo-pagamento').innerHTML = conteudo;
 }
@@ -114,38 +113,36 @@ function debito() {
     `<div class="titulo-pagamento">
         <h3 style="color:white;">Dados do titular do cartao</h3>
     </div>
-    <div class="container">
+    <form id="formulario" class="container">
+            <label class="label">Numero do Cartao
+                ${tipo_cartao[resultado-1]}
+                <input name="num_cartao" class="input" type="text" required/>
+            </label>
 
-        <label class="label">Numero do Cartao
-            ${tipo_cartao[resultado-1]}
-            <input class="input" type="text"/>
-        </label>
+            <label class="label">CPF
+                <input name="cpf" class="input" type="text" required/>
+            </label>                     
 
-        <label class="label">CPF
-            <input class="input" type="text"/>
-        </label>                     
+            <label class="label">Nome Completo
+                <input name="nome" class="input" type="text" required/>
+            </label>    
 
-        <label class="label">Nome Completo
-            <input class="input" type="text"/>
-        </label>    
+            <label class="label">Data de nascimento
+                <input name="data_nasc" class="input" type="date" required/>
+            </label>
 
-        <label class="label">Data de nascimento
-            <input class="input" type="date"/>
-        </label>
+            <label class="label">Validade
+                    <input name="validade" class="input" type="date" required/>
+            </label>
 
-        <label class="label">Validade
-                <input class="input" type="date"/>
-        </label>
-
-        <label class="label">Codigo de Seguranca
-            <input class="input" type="text"/>
-        </label>                     
-          
-        <label class="label">Telefone
-            <input class="input" type="text"/>
-        </label>
-          
-    </div>`;
+            <label class="label">Codigo de Seguranca
+                <input name="cod_segu"class="input" type="text" required/>
+            </label>                     
+            
+            <label class="label">Telefone
+                <input name="telefone" class="input" type="text" required/>
+            </label>
+    </form>`;
 
     document.getElementById('tipo-pagamento').innerHTML = conteudo;
 }
@@ -167,20 +164,44 @@ function pix() {
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
 }
 
-function finalizar() {
-    var conteudo =``;
+async function finalizar() {
 
-    document.getElementById("tipo-pagamento").innerHTML = conteudo;
-    document.getElementById("botoes").innerHTML = conteudo;
+    var form = document.getElementById("formulario");
+    var dados = new FormData (form);
 
-    var conteudo = 
-    `<div class="finalizar-card">
-        <div class="finalizar-titulo">Obrigado por comprar na Cleude Store</div>
+    var promise = await fetch("php/finalizar.php", {
+        method: "POST",
+        body:dados
+    });
 
-        <div class="finalizar-baixo">
-            <a class="finalizar-botao" href="index.html">Ver mais produtos</a>
-        </div>
-    </div>`
+    var continuar = await promise.json();
 
-    document.getElementById("tipo-pagamento").innerHTML = conteudo;
+    if (continuar == 1){
+        var conteudo =``;
+
+        document.getElementById("tipo-pagamento").innerHTML = conteudo;
+        document.getElementById("botoes").innerHTML = conteudo;
+    
+        var conteudo = 
+        `<div class="finalizar-card">
+            <div class="finalizar-titulo">Obrigado por comprar na Cleude Store</div>
+    
+            <div class="finalizar-baixo">
+                <a class="finalizar-botao" href="index.html">Ver mais produtos</a>
+            </div>
+        </div>`
+    
+        document.getElementById("tipo-pagamento").innerHTML = conteudo;
+    }
+    else if(continuar == 2){
+        alert("CPF invalido");
+    }
+    else if(continuar == 3){
+        alert("Codigo de Seguranca invalido");
+    }
+    else if(continuar== 5){
+        alert("Preenchar todos os campos para finalizar a compra");
+        
+    }
 }
+
