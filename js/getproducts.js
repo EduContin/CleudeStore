@@ -16,18 +16,26 @@ window.onload = async function () {
         <div class="produto">
             <div class="produto-info">
                 <div class="produto-nome">
-                    <h2>Kit Crochê</h2>
+                    <h2>${dados[i].nome}</h2>
                 </div>
                 <img class="produto-info" src="img/produtos/kitcroche.webp">
                 <div class="produto-valor">
                     <h4>R$40.00</h4>
                 </div>                
             </div>
-            <button class="produto-botao">Adicionar ao Carrinho</button>
+            <button class="produto-botao onclick="adicionar_ao_carrinho(${dados[i].id})">Adicionar ao Carrinho</button>
         </div>
     </div>`;
     
         document.getElementById("produtos").innerHTML += conteudo;
     
     }
+}
+
+async function adicionar_ao_carrinho(id) {
+    resultado = await fetch("../php/adicionaraocarrinho.php", {
+        method: "POST"
+    });
+
+    
 }
