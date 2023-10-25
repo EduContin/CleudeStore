@@ -1,3 +1,9 @@
+//function credito() {
+//   var conteudo = ``
+//
+//    var conteudo = ``
+//}
+
 /*Ambas as funcoes credito_cartao e 
 debito_cartao validarao se sera usado
 o icone de mastercard ou visa*/

@@ -1,3 +1,13 @@
+.container {
+    width: 1500px;
+    height: 600px;
+
+
+    display: flex;
+}
+
+.container-esquerda{
+    width: 70%;
 .containers {
     display: flex;
     flex-wrap: wrap;
@@ -22,6 +32,7 @@
     border-radius: 15px;
     background-color:#db46b4;
 
+
     display: flex;
     flex-direction: column;
 }
@@ -29,6 +40,16 @@
 #tipo-pagamento{
     width: 100%;
     height: 80%;
+
+    background-color:coral ;
+
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
     background-color:#db46b4;
     border-start-end-radius: 15px;
@@ -166,7 +187,9 @@
 .botoes{
     width: 100%;
     height: 20%;
-    
+
+    background-color: crimson;
+
     display: flex;
     align-items:center;
     justify-content: space-around;
@@ -179,6 +202,14 @@
 .botao-opcoes-pagamento{
     width: 120px;
     height: 40px;
+
+    background-color: rgb(163, 36, 68);
+    border:none;
+    border-radius: 10px;
+
+    margin-top: 10px;
+
+    transition: all 0.4s;
 
     background-color: blueviolet;
     border:none;
@@ -193,11 +224,18 @@
 
 .botao-opcoes-pagamento:hover{
     transform: scale(1.05);
+
+    background-color: rgb(167, 18, 55);
+}
+
+.container-direita{
+    width: 30%;
     background-color: rgb(127, 27, 221);
 }
 
 .container-direita{
     width: 450px;
+
     height: 100%;
 
     display: flex;
@@ -220,6 +258,8 @@
 #pagamento-total{
     width: 100%;
     height: 80%;
+
+    background-color: aqua;
     background-color: #db46b4;
 
     border-start-end-radius: 15px;
@@ -232,12 +272,14 @@
     border-start-end-radius: 15px;
     border-start-start-radius: 15px;
 
-
 }
 
 .pagamento-botao{
     width:100%;
     height: 20%;
+
+    background-color: chartreuse;
+
     background-color: #db46b4;
 
     display: flex;
@@ -267,4 +309,4 @@
     transform: scale(1.05);
     
 }
-
+}
