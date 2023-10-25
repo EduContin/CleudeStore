@@ -1,34 +1,338 @@
-#tabela-compras{
+.container {
+    width: 1500px;
+    height: 600px;
+
+
+<<<<<<< HEAD
+    display: flex;
+}
+
+.container-esquerda{
+    width: 70%;
+.containers {
+=======
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
+    display: flex;
+}
+
+.container-esquerda{
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-esquerda-pagamento {
+    width: 800px;
+    height:500px;
+
+    border: solid 2px #222222;
+    border-radius: 15px;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+#tipo-pagamento{
+    width: 100%;
+    height: 80%;
+    background-color:coral ;
+
+<<<<<<< HEAD
+    background-color:coral ;
+
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    background-color:#db46b4;
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+.metodo-pagamento{
+    width: 100%;
+    height: 100%;
+
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: xx-large;
+    color: white;
+}
+
+.titulo-pagamento {
+    font-size: x-large;
+}
+
+
+.container {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.label {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    font-size:large;
+    position: relative;
+    color: white;
+}
+
+.label i {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+}
+
+.input {
+    width: 100%;
+    height: 40%;
+
+    margin-top: 5px;
+
+    border: solid 1px #222222;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+}
+
+.verificacao-card {
+    width: 100%;
+    height: 80%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.verificacao-titulo {
+    font-size: x-large;
+    color: white;
+}
+
+.verificacao-baixo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
-    width: 1200px;
-    height: 400px;
-    border: 2px;
-    border-radius: 3x;
+    margin-top: 20px;
+}
+.verificacao-select {
+    width: 150px;
+    height: 40px;
+
+    border: solid 1px #222222;
+    border-radius: 10px;
+    outline: none;
+}
+
+.verificacao-botao {
+    width: 120px;
+    height: 40px;
+
+    background-color: blueviolet;
+    border:none;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    transition: all 0.4s;
+    font-size: large;
+    color: white;
+}
+.verificacao-botao:hover {
+    transform: scale(1.05);
+    background-color: rgb(127, 27, 221);
+}
+
+.pix-titulo{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+
+    font-size: xx-large;
+    color: white;
+}
+
+.pix-imagem {
+    width: 250px;
+    height: 300px;
+=======
+    display: flex;
+    align-items: center;
+    justify-content: center;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
+}
+
+.botoes{
+    width: 100%;
+    height: 20%;
+<<<<<<< HEAD
+
+    background-color: crimson;
+
+=======
+    background-color: crimson;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+
+}
+
+.botao-opcoes-pagamento{
+    width: 120px;
+    height: 40px;
+<<<<<<< HEAD
+
+    background-color: rgb(163, 36, 68);
+    border:none;
+    border-radius: 10px;
+
+    margin-top: 10px;
+
+    transition: all 0.4s;
+
+    background-color: blueviolet;
+=======
+    background-color: rgb(163, 36, 68);
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
+    border:none;
+    border-radius: 10px;
+
+    margin-top: 10px;
+
+    transition: all 0.4s;
+}
+
+.botao-opcoes-pagamento:hover{
+    transform: scale(1.05);
+<<<<<<< HEAD
+
+    background-color: rgb(167, 18, 55);
+}
+
+.container-direita{
+    width: 30%;
+    background-color: rgb(127, 27, 221);
+}
+
+.container-direita{
+    width: 450px;
+
+=======
+    background-color: rgb(167, 18, 55);
+}
+
+.container-direita{
+    width: 30%;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-direita-pagamento{
+    width:300px;
+    height:500px;
+    border: solid 2px #222222;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#pagamento-total{
+    width: 100%;
+    height: 80%;
+<<<<<<< HEAD
+
+    background-color: aqua;
+    background-color: #db46b4;
+=======
+    background-color: aqua;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
+
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
 
     display: flex;
     justify-content: center;
+    align-items:center;
 
-    align-items: center;
-
-}
-
-.opcoes{
-    width: 1000px;
-    height:600px;
-    display:flex;
-
-    flex-direction: column;
-    
+<<<<<<< HEAD
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+=======
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
 
 }
 
-.card {
-    width:300px;
-    height:400px;
+.pagamento-botao{
+    width:100%;
+    height: 20%;
+<<<<<<< HEAD
 
-    border:solid 2px #222222;
-    border-radius: 3px;
+    background-color: chartreuse;
+
+    background-color: #db46b4;
+=======
+    background-color: chartreuse;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
 
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-pagar {
+    width: 70%;
+    height: 70%;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: blueviolet;
+    transition: all 0.4s;
+}
+
+.botao-pagar:hover{
+    background-color: rgb(127, 27, 221);
+    transform: scale(1.05);
+    
+<<<<<<< HEAD
+}
+=======
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
 }
