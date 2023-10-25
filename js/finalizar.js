@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-=======
-//function credito() {
-//   var conteudo = ``
-//
-//    var conteudo = ``
-<<<<<<< HEAD
-//}
-
->>>>>>> 576fbe366afc54ac30ca9c19303a2e13c833616a
 /*Ambas as funcoes credito_cartao e 
 debito_cartao validarao se sera usado
 o icone de mastercard ou visa*/
@@ -265,12 +255,4 @@ function pix() {
         <img class="pix-imagem" src="img/frame.png" alt="QR CODE do pix">
     </div>`;
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
-
-<<<<<<< HEAD
 }
-=======
-}
-=======
-//}
->>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
->>>>>>> 576fbe366afc54ac30ca9c19303a2e13c833616a
