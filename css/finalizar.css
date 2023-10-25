@@ -3,25 +3,25 @@
     height: 600px;
 
 
+<<<<<<< HEAD
     display: flex;
 }
 
 .container-esquerda{
     width: 70%;
 .containers {
+=======
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
     display: flex;
-    flex-wrap: wrap;
 }
 
 .container-esquerda{
-    width: 1050px;
+    width: 70%;
     height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-top: 100px;
 }
 
 .container-esquerda-pagamento {
@@ -30,7 +30,6 @@
 
     border: solid 2px #222222;
     border-radius: 15px;
-    background-color:#db46b4;
 
 
     display: flex;
@@ -40,7 +39,9 @@
 #tipo-pagamento{
     width: 100%;
     height: 80%;
+    background-color:coral ;
 
+<<<<<<< HEAD
     background-color:coral ;
 
     border-start-end-radius: 15px;
@@ -182,26 +183,33 @@
 .pix-imagem {
     width: 250px;
     height: 300px;
+=======
+    display: flex;
+    align-items: center;
+    justify-content: center;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
 }
 
 .botoes{
     width: 100%;
     height: 20%;
+<<<<<<< HEAD
 
     background-color: crimson;
 
+=======
+    background-color: crimson;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
     display: flex;
     align-items:center;
     justify-content: space-around;
-
-    border-end-end-radius: 15px;
-    border-end-start-radius: 15px;
 
 }
 
 .botao-opcoes-pagamento{
     width: 120px;
     height: 40px;
+<<<<<<< HEAD
 
     background-color: rgb(163, 36, 68);
     border:none;
@@ -212,18 +220,20 @@
     transition: all 0.4s;
 
     background-color: blueviolet;
+=======
+    background-color: rgb(163, 36, 68);
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
     border:none;
     border-radius: 10px;
+
     margin-top: 10px;
 
     transition: all 0.4s;
-
-    font-size:large;
-    color: white;
 }
 
 .botao-opcoes-pagamento:hover{
     transform: scale(1.05);
+<<<<<<< HEAD
 
     background-color: rgb(167, 18, 55);
 }
@@ -236,13 +246,18 @@
 .container-direita{
     width: 450px;
 
+=======
+    background-color: rgb(167, 18, 55);
+}
+
+.container-direita{
+    width: 30%;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
     height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-top: 100px;
 }
 
 .container-direita-pagamento{
@@ -258,9 +273,13 @@
 #pagamento-total{
     width: 100%;
     height: 80%;
+<<<<<<< HEAD
 
     background-color: aqua;
     background-color: #db46b4;
+=======
+    background-color: aqua;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
 
     border-start-end-radius: 15px;
     border-start-start-radius: 15px;
@@ -272,25 +291,29 @@
     justify-content: center;
     align-items:center;
 
+<<<<<<< HEAD
     border-start-end-radius: 15px;
     border-start-start-radius: 15px;
+=======
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
 
 }
 
 .pagamento-botao{
     width:100%;
     height: 20%;
+<<<<<<< HEAD
 
     background-color: chartreuse;
 
     background-color: #db46b4;
+=======
+    background-color: chartreuse;
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border-end-end-radius: 15px;
-    border-end-start-radius: 15px;
 }
 
 .botao-pagar {
@@ -302,14 +325,14 @@
 
     background-color: blueviolet;
     transition: all 0.4s;
-
-    color: white;
-    font-size:x-large;
 }
 
 .botao-pagar:hover{
     background-color: rgb(127, 27, 221);
     transform: scale(1.05);
     
+<<<<<<< HEAD
 }
+=======
+>>>>>>> parent of add10cb (Javascript iniciado e praticamente finalizado)
 }
