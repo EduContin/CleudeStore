@@ -22,11 +22,14 @@
 .produto-info {
     height: 300px;
     width: 300px;
+
 }
 
 .produto-info img {
+
     height: 70%;
     width: 100%;
+    
 }
 
 .produto-nome {
@@ -36,10 +39,19 @@
 
     height: 15%;
 
-    color: white;
-    -webkit-text-stroke: 1px black;
+    color: black;
 
 }
+
+.produto-valor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 12.5%;
+    
+}
+
 .produto-botao {
     color: white;
     font-size: 20px;
@@ -52,4 +64,5 @@
 
     height: 75px;
     width: 300px;
+    
 }
