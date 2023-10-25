@@ -256,3 +256,21 @@ function pix() {
     </div>`;
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
 }
+
+function finalizar() {
+    var conteudo =``;
+
+    document.getElementById("tipo-pagamento").innerHTML = conteudo;
+    document.getElementById("botoes").innerHTML = conteudo;
+
+    var conteudo = 
+    `<div class="finalizar-card">
+        <div class="finalizar-titulo">Obrigado por comprar na Cleude Store</div>
+
+        <div class="finalizar-baixo">
+            <button class="finalizar-botao" type="button" <a href="index.html"></a> Ver mais produtos</button>
+        </div>
+    </div>`
+
+    document.getElementById("tipo-pagamento").innerHTML = conteudo;
+}
