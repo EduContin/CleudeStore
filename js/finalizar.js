@@ -255,5 +255,4 @@ function pix() {
         <img class="pix-imagem" src="img/frame.png" alt="QR CODE do pix">
     </div>`;
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
-
 }
