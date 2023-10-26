@@ -2,6 +2,16 @@
 debito_cartao validarao se sera usado
 o icone de mastercard ou visa*/
 
+window.onload = async function pagamento() {
+    var resultado = await fetch("php/finalizar-products.php", {
+        method: "GET",
+    });
+
+    var produtos = await resultado.json();
+}
+
+
+
 
 function credito_cartao() {  
     var conteudo = ``;

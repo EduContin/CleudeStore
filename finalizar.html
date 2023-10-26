@@ -36,42 +36,57 @@
         </nav>
 
         <div class="containers">
+            <div class="container-inteiro">
 
-            <div class="container-esquerda">
-
-                <div class="container-esquerda-pagamento">
-
-                    <div id="tipo-pagamento">
-                        <div class="metodo-pagamento">
-                            Escolha um dos 3 metodos abaixo<br>
-                             para efetuar o seu pagamento</div>
+                    <div class="container-esquerda">
+                        <div id="tipo-pagamento">
+                            <div class="metodo-pagamento">
+                                Escolha um dos 3 metodos abaixo<br>
+                                 para efetuar o seu pagamento</div>
+                        </div>
+                        <div id="botoes" class="botoes">
+                            <button class="botao-opcoes-pagamento" type="button" onclick="credito_cartao()">Credito</button>
+                            <button class="botao-opcoes-pagamento" type="button" onclick="debito_cartao()">Debito</button>
+                            <button class="botao-opcoes-pagamento" type="button" onclick="pix()">Pix</button>
+                        </div>
                     </div>
+       
+                    <div class="container-direita">  
+                        <div id="pagamento-total">
+                            <div class="espaco-pagamento">
+                                <div class="espaco-produtos">
 
-                    <div id="botoes" class="botoes">
-                        <button class="botao-opcoes-pagamento" type="button" onclick="credito_cartao()">Credito</button>
 
-                        <button class="botao-opcoes-pagamento" type="button" onclick="debito_cartao()">Debito</button>
-    
-                        <button class="botao-opcoes-pagamento" type="button" onclick="pix()">Pix</button>
+                                    <div class="produtos">
+                                        <div class="produto-cima">
+                                            <div class="produto-nome">Kit Croche</div>
+                                            <div class="produto-preco"> R$20.00</div>
+                                        </div>
+                                        <div class="produto-baixo">x7</div>
+                                    </div>
+
+
+                                    <div class="produtos">
+                                        <div class="produto-cima">
+                                            <div class="produto-nome">Kit Croche</div>
+                                            <div class="produto-preco"> R$20.00</div>
+                                        </div>
+                                        <div class="produto-baixo">x7</div>
+
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="preco-total">
+                                    <div class="preco-total-text">R$140.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagamento-botao">
+                            <button class="botao-pagar" type="button" onclick="finalizar()">Finalizar</button>
+                        </div>
                     </div>
-
-                </div>
-            </div>
-
-
-            <div class="container-direita">
-                <div class="container-direita-pagamento">
-
-                    <div id="pagamento-total">sasasasa</div>
-
-                    <div class="pagamento-botao">
-                        <button class="botao-pagar" type="button" onclick="finalizar()">Finalizar</button>
-                    </div>
-                </div>
-
-            </div>
-
-              
+            </div>      
         </div>
 
     </body>
