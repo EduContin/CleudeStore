@@ -1,25 +1,52 @@
-/*Ambas as funcoes credito_cartao e 
-debito_cartao validarao se sera usado
-o icone de mastercard ou visa*/
+/*Imprime os produtos que estao no carrinho + o preco total deles*/
 
-window.onload = async function pagamento() {
+var preco_parcelas = 0;
+
+window.onload = async function () {
     var resultado = await fetch("php/finalizar-products.php", {
         method: "GET",
     });
 
     var produtos = await resultado.json();
+
+    for (var i = 0; i < produtos.length; i++){
+
+        var preco_total = 0;
+
+        var conteudo_produtos = 
+        `<div class="produtos">
+            <div class="produto-cima">
+                <div class="produto-nome">${produtos[i].nome}</div>
+                <div class="produto-preco">R$${produtos[i].preco}</div>
+            </div>
+            <div class="produto-baixo">x${produtos[i].quantidade}</div>
+        </div>`;
+        document.getElementById("espaco-produtos").innerHTML += conteudo_produtos;
+
+        preco_total += produtos[i].preco * produtos[i].quantidade;
+
+        
+    }
+    var conteudo_preco = 
+    `<div class="preco-total-text">R$${preco_total.toFixed(2)}</div>`;
+
+    document.getElementById("preco-total").innerHTML = conteudo_preco;
 }
 
 
+/*Ambas as funcoes credito_cartao e 
+debito_cartao validarao se sera usado
+o icone de mastercard ou visa*/
 
-
-function credito_cartao() {  
+function credito_cartao() {
     var conteudo = ``;
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
 
     var conteudo =`                        
     <div class="verificacao-card">
-        <div class="verificacao-titulo">Qual Cartao voce usa?</div>
+        <div class="verificacao-titulo">
+            <h3 style="color:white;">Qual Cartao voce usa?</h3>
+        </div>
     
         <div class="verificacao-baixo">
             <select id="select" class="verificacao-select">
@@ -38,7 +65,9 @@ function debito_cartao() {
 
     var conteudo =`                        
     <div class="verificacao-card">
-        <div class="verificacao-titulo">Qual Cartao voce usa?</div>
+        <div class="verificacao-titulo">
+            <h3 style="color:white;">Qual Cartao voce usa?</h3>
+        </div>
     
         <div class="verificacao-baixo">
             <select id="select" class="verificacao-select">
@@ -59,7 +88,17 @@ respectivas funcoes _cartao e possuem uma verificacao
 do valor final do select nas funcoes anteriores,
  que escolhera quais icones serao usados*/
 
-function credito() {  
+async function credito() {
+    var pegando_precos = await fetch("php/finalizar-products.php", {
+        method: "GET",
+    });
+
+    vetor_precos = await pegando_precos.json();
+
+    for (var i = 0; i < vetor_precos.length; i++) {
+        var parcelas = 0;
+        parcelas += vetor_precos[i].preco * vetor_precos[i].quantidade;
+    }
 
     resultado = document.getElementById("select").value;
 
@@ -93,18 +132,20 @@ function credito() {
             </label>
 
             <label class="label">Codigo de Seguranca
+                <i class="fa-solid fa-lock"></i>
                 <input name="cod_segu" class="input" type="text" required/>
             </label>                     
             
             <label class="label">Telefone
+                <i class="fa-solid fa-phone"></i>
                 <input name="telefone" class="input" type="text" required/>
             </label>
                                             
             <label class="label">Parcelas
                 <select class="input" name="parcelas">
-                    <option value="1" selected>1x de R$... sem juros</option>
-                    <option value="2" >2x de R$... sem juros</option>
-                    <option value="3" >3x de R$... sem juros</option>
+                    <option value="1" selected>1x de R$${parcelas.toFixed(2)} sem juros</option>
+                    <option value="2" >2x de R$${(parcelas/2).toFixed(2)} sem juros</option>
+                    <option value="3" >3x de R$${(parcelas/3).toFixed(2)} sem juros</option>
                 </select>
             </label>            
     </form>`;
@@ -146,10 +187,12 @@ function debito() {
             </label>
 
             <label class="label">Codigo de Seguranca
+                <i class="fa-solid fa-lock"></i>
                 <input name="cod_segu"class="input" type="text" required/>
             </label>                     
             
             <label class="label">Telefone
+                <i class="fa-solid fa-phone"></i>
                 <input name="telefone" class="input" type="text" required/>
             </label>
     </form>`;
@@ -166,10 +209,12 @@ function pix() {
 
     conteudo =
     `<div>
-        <div class="pix-titulo">Aqui esta o seu QR CODE</div>
+        <div class="pix-titulo">
+            <h3 style="color:white;">Aqui esta o seu QR code</h3>
+        </div>
     </div>
     <div>
-        <img class="pix-imagem" src="img/frame.png" alt="QR CODE do pix">
+        <img class="pix-imagem" src="img/QRcode.png" alt="QR CODE do pix">
     </div>`;
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
 }

@@ -81,6 +81,7 @@
     transform: scale(1.05);
 
     background-color: rgb(127, 27, 221);
+    cursor: pointer;
 }
 
 
@@ -96,7 +97,6 @@
     width: 100%;
     height: 80%;
 
-    background-color: aqua;
 
     display: flex;
     justify-content: center;
@@ -105,11 +105,11 @@
 
 .espaco-pagamento {
     width: 90%;
-    height: 100%;
+    height: 90%;
 
-    background-color: chartreuse;
-    overflow-y: scroll;
-    scrollbar-width: none;
+    border: solid 3px #222222;
+    border-radius: 10px;
+
 }
 .espaco-produtos {
     width: 100%;
@@ -119,6 +119,17 @@
     flex-direction: column;
 
     background-color: aliceblue;
+
+    overflow-y:scroll;
+    overflow-x: scroll;
+    scrollbar-width: 5px;
+    scroll-margin-block: 10px 50px;
+
+    border-radius: 10px 10px 0px 0px;
+}
+
+.espaco-produtos::-webkit-scrollbar {
+    display: none;
 }
 
 .produtos{
@@ -133,6 +144,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 5px;
+    margin-left: 5px;
 
 }
 
@@ -140,22 +153,19 @@
     font-size: x-large;
     color: black;
 
-    margin-top:5px;
-    margin-left: 5px;
 }
 .produto-preco {
     font-size: x-large;
     color: black;
     text-decoration: dashed;
-
-    margin-top: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .produto-baixo{
     font-size: large;
     color: black;
-    margin-left: 10px;
+
+    margin-left: 15px;
 }
 
 
@@ -163,21 +173,32 @@
     width: 100%;
     height: 25%;
 
-    background-color: crimson;
+    background-color: #9b307e;
 
     display: flex;
     align-items: center;
     justify-content:right;
+
+    border-radius: 0px 0px 10px 10px;
     
 }
 .preco-total-text{
     display: flex;
-    margin-right: 20px;
 
     font-size: xx-large;
     color: white;
 
     text-decoration: underline;
+
+    margin-right: 30px;
+
+    transition: all 0.4s;
+}
+
+.preco-total-text:hover {
+    transform: scale(1.05);
+    color: rgb(240, 231, 231);
+    cursor:default;
 }
 
 .pagamento-botao{
@@ -206,6 +227,8 @@
 .botao-pagar:hover{
     background-color: rgb(127, 27, 221);
     transform: scale(1.05);
+
+    cursor: pointer;
     
 }
 
@@ -234,14 +257,16 @@
     flex-direction: column;
 
     font-size:large;
-    position: relative;
     color: white;
+
+    position: relative;
 }
 
 .label i {
     position: absolute;
     top: 35px;
-    right: 10px;
+    right: 0px;
+    color: rgb(30,48,80);
 }
 
 .input {
@@ -268,7 +293,6 @@
 }
 .verificacao-titulo {
     font-size: x-large;
-    color: white;
 }
 
 .verificacao-baixo{
@@ -303,6 +327,7 @@
 .verificacao-botao:hover {
     transform: scale(1.05);
     background-color: rgb(127, 27, 221);
+    cursor: pointer;
 }
 
 .pix-titulo{
