@@ -12,7 +12,7 @@ window.onload =  async function () {
         var price = dados[i].preco;
         var card = 
         `<div class="products">
-            <div class="img-space"><img src=""class="img-product"></div>
+            <div class="img-space"><img src="img/produtos/${dados[i].id}.png"class="img-product"></div>
             <div class="product-name">${product_name}</div>
             <div class="price">R$:${price}</div>
 

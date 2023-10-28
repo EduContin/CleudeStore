@@ -50,6 +50,11 @@
     justify-content: center;
 }
 
+.img-space img {
+    background-color: white;
+    width: 50%;
+}
+
 .product-name{
     width: 30%;
     padding: 5%;
