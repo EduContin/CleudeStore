@@ -1,9 +1,9 @@
 <?php
-    $conexao = mysqli_connect("localhost:3306","root", "LEGOland2015@","cleude");
+    $conexao = mysqli_connect("localhost:3306","root", "root","cleude");
 
-    $resultado = mysqli_query($conexao, "select p.nome, p.preco, c.id_produto, c.quantidade, sum(p.preco * c.quantidade) as preco_produto
-                                        from carrinho as c join produtos as p on p.id = c.id_produto
-                                        group by c.id_produto order by c.id_produto;");
+    $resultado = mysqli_query($conexao, "SELECT p.nome, p.preco, c.id_produto, c.quantidade, SUM(p.preco * c.quantidade) AS preco_produto
+                                        FROM carrinho AS c JOIN produtos AS p ON p.id = c.id_produto
+                                        GROUP BY c.id_produto ORDER BY c.id_produto;");
 
     $produtos = array();
 

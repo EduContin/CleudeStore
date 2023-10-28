@@ -1,19 +1,2 @@
 Cor principal (roxo): #b71a8c
 Cor secundária (fundo): #f8e5aa
-            <div class="products">
-
-            </div>
-            <div class="products">
-                <div class="img-space"><img src="https://http2.mlstatic.com/D_NQ_NP_675217-MLB46858519762_072021-O.webp"class="img-product"></div>
-                <div class="product-name">JOAO CARLOS ROBERTO AUGUSTO</div>
-                <div class="price">R$:999,99</div>
-
-                <div class="remove" onclick="remover_produto($dados[i][0])"><img src="img/delete.png" alt="aaaaaaaaa" class="img-remove"></div>    
-            </div>
-            <div class="products">
-
-            </div>
-        
-            <div class="finish">
-                FINALIZAR
-            </div>

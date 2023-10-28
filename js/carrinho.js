@@ -16,7 +16,7 @@ window.onload =  async function () {
             <div class="product-name">${product_name}</div>
             <div class="price">R$:${price}</div>
 
-            <div class="remove" ><img src="img/delete.png" alt="aaaaaaaaa" class="img-remove" onclick="deletar(${id})></div>    
+            <div class="remove" ><img src="img/delete.png" class="img-remove" onclick="deletar(${id})></div>    
         </div>`
         document.getElementById("card-produtos").innerHTML += card;
     }
