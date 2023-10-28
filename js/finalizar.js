@@ -1,6 +1,5 @@
 /*Imprime os produtos que estao no carrinho + o preco total deles*/
 
-var preco_parcelas = 0;
 
 window.onload = async function () {
     var resultado = await fetch("php/finalizar-products.php", {
@@ -9,10 +8,8 @@ window.onload = async function () {
 
     var produtos = await resultado.json();
 
+    var preco_total = 0;
     for (var i = 0; i < produtos.length; i++){
-
-        var preco_total = 0;
-
         var conteudo_produtos = 
         `<div class="produtos">
             <div class="produto-cima">
@@ -22,13 +19,11 @@ window.onload = async function () {
             <div class="produto-baixo">x${produtos[i].quantidade}</div>
         </div>`;
         document.getElementById("espaco-produtos").innerHTML += conteudo_produtos;
-
-        preco_total += produtos[i].preco * produtos[i].quantidade;
-
         
+        preco_total += parseFloat(produtos[i].preco_produto);
     }
     var conteudo_preco = 
-    `<div class="preco-total-text">R$${preco_total.toFixed(2)}</div>`;
+    `<div class="preco-total-text">R$${parseFloat(preco_total).toFixed(2)}</div>`;
 
     document.getElementById("preco-total").innerHTML = conteudo_preco;
 }
@@ -86,7 +81,8 @@ var tipo_cartao = ['<i class="fa-brands fa-cc-visa"></i>', '<i class="fa-brands 
 /*As funcoes credito e debito sao chamadas por suas 
 respectivas funcoes _cartao e possuem uma verificacao
 do valor final do select nas funcoes anteriores,
- que escolhera quais icones serao usados*/
+ que escolhera quais icones serao usados. 
+ Elas imprimiram na tela os inputs necessarios para o usuario preencher*/
 
 async function credito() {
     var pegando_precos = await fetch("php/finalizar-products.php", {
@@ -95,8 +91,8 @@ async function credito() {
 
     vetor_precos = await pegando_precos.json();
 
+    var parcelas = 0;
     for (var i = 0; i < vetor_precos.length; i++) {
-        var parcelas = 0;
         parcelas += vetor_precos[i].preco * vetor_precos[i].quantidade;
     }
 
@@ -153,9 +149,11 @@ async function credito() {
     document.getElementById('tipo-pagamento').innerHTML = conteudo;
 }
 
+
+
 function debito() {
 
-    resultado = document.getElementById("tipo-pagamento").value;
+    resultado = document.getElementById("select").value;
 
     var conteudo = ``;
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
@@ -199,6 +197,8 @@ function debito() {
 
     document.getElementById('tipo-pagamento').innerHTML = conteudo;
 }
+
+
 /* A funcao PIX gerara um QR CODE para ser
 efetivado o pagamento*/
 
@@ -218,6 +218,10 @@ function pix() {
     </div>`;
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
 }
+
+/* Funcao do botao finalizar, ele recebera os dados dos inputs e fara uma verificacao sobre eles
+logo apos, caso passe pela verificacao corretamente, finalizara a compra, ao contrario fara um
+alert sobre o erro na verificacao*/
 
 async function finalizar() {
 
