@@ -32,18 +32,27 @@ window.onload = async function () {
     }
 }
 
-// async function adicionar_ao_carrinho(id){
-    
-//     var resposta = await fetch('php/adicionaraocarrinho.php',{
-//         method:"POST",
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: {"id": id}
-//     });
+function searchFunction() {
+    // Get the value of the search bar
+    var input, filter, divs, a, i, txtValue;
+    input = document.getElementById("searchBar");
+    filter = input.value.toUpperCase();
 
-//     console.log(resposta)
-// }
+    divs = document.getElementById("produtos");
+    
+    div = divs.getElementsByClassName("produto");
+    a = divs.getElementsByClassName("produto-nome");
+
+    // Loop through all divs, and hide those who don't match the search query
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            div[i].parentElement.style.display = "";
+        } else {
+            div[i].parentElement.style.display = "none";
+        }
+    }
+}
 
 function adicionar_ao_carrinho(id) {
 

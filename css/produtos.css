@@ -56,7 +56,7 @@
     
 }
 
-.produto-botao {
+/* .produto-botao {
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -68,5 +68,34 @@
 
     height: 75px;
     width: 300px;
+    
+} */
+
+.produto-botao {
+    height: 75px;
+    width: 300px;
+
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+
+    background-color: #b71a8c;
+    transition: all 0.4s;
+
+    color: white;
+    font-size:x-large;
+}
+
+.produto-botao:hover{
+    background-color: #a339b8;
+    transform: scale(1.025);
+
+    cursor: pointer;
+    
+}
+
+.produto-botao:active {
+    background-color: rgb(159, 106, 209);
+
+    cursor: pointer;
     
 }
