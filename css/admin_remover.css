@@ -36,7 +36,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: #b71a8c;
+    background-color: #d60000;
     border-radius: 15px 15px 0px 0px;
 
     height: 15%;
@@ -56,21 +56,6 @@
     
 }
 
-/* .produto-botao {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-
-    border-end-end-radius: 15px;
-    border-end-start-radius: 15px;
-
-    background-color: #b71a8c;
-
-    height: 75px;
-    width: 300px;
-    
-} */
-
 .produto-botao {
     height: 75px;
     width: 300px;
@@ -78,7 +63,7 @@
     border: none;
     border-radius: 0px 0px 10px 10px;
 
-    background-color: #b71a8c;
+    background-color: #d60000;
     transition: all 0.4s;
 
     color: white;
@@ -86,7 +71,7 @@
 }
 
 .produto-botao:hover{
-    background-color: #a339b8;
+    background-color: #ff0000;
     transform: scale(1.025);
 
     cursor: pointer;
