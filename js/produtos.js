@@ -23,7 +23,7 @@ window.onload = async function () {
                     <h4>R$${dados[i].preco}</h4>
                 </div>                
             </div>
-            <button class="produto-botao onclick="adicionar_ao_carrinho(${dados[i].id})">Adicionar ao Carrinho</button>
+            <button class="produto-botao" onclick="adicionar_ao_carrinho(${dados[i].id})">Adicionar ao Carrinho</button>
         </div>
     </div>`;
     
@@ -32,10 +32,35 @@ window.onload = async function () {
     }
 }
 
-async function adicionar_ao_carrinho(id) {
-    resultado = await fetch("../php/adicionaraocarrinho.php", {
-        method: "POST"
-    });
+// async function adicionar_ao_carrinho(id){
+    
+//     var resposta = await fetch('php/adicionaraocarrinho.php',{
+//         method:"POST",
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: {"id": id}
+//     });
 
+//     console.log(resposta)
+// }
 
+function adicionar_ao_carrinho(id) {
+
+    const data = {
+        id: id
+    };
+
+    const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    };
+
+    fetch('php/adicionaraocarrinho.php', options)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch((error) => console.error('Error:', error));
 }
