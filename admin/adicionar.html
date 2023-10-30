@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
-    <script defer src="js/carrinho.js"></script>
+    <script defer src="../js/novoproduto.js"></script>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/adicionar.css">
     <link rel="stylesheet" href="../css/fontawesome-free-web/css/all.css">
-
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-left">
             <div class="logo">
-                <a href="index.html">
-                    <img src="img/vovo.svg">
+                <a href="../index.html">
+                    <img src="../img/vovo.svg">
                 </a>
                 <div class="navbar-logo-text">
                     <h1>CLEUDE STORE</h1>
                 </div>
-            </div>
-            <div class="search">
-               
             </div>
         </div>
         <div class="navbar-right">
@@ -30,13 +27,16 @@
             <div class="dropdown">
                 <button class="dropbtn">MENU</button>
                 <div class="dropdown-content">
-                    <a href="index.html">Produtos</a>
-                    <a href="carrinho.html">Carrinho</a>
-                    <a href="finalizar.html">Finalizar</a>
+                    <a href="../index.html">Produtos</a>
+                    <a href="../carrinho.html">Carrinho</a>
+                    <a href="../finalizar.html">Finalizar</a>
+                    <a href="admin/adicionar.html">Adicionar</a>
+                    <a href="admin/remover.html">Remover</a>
                 </div>
             </div>
         </div>
     </nav>
+
     <div class="background-reference">
         <div class="card" id="card">
             <div class="title-1">
@@ -58,15 +58,15 @@
             <div class="inputs-form">
                 <label><i class="fa-solid fa-file-signature" style="color: #b71a8c;"></i> Nome:</label>
                 <br>
-                <div class="inputs-style"><input type="text" class="upload-name" placeholder="Ex: Coisa de Vó..."></div>
+                <div class="inputs-style"><input type="text" class="upload-name" placeholder="Ex: Coisa de Vó..." id="nome"></div>
             </div>
 
             <div class="inputs-form">
                 <label><i class="fa-solid fa-money-bill" style="color: #b71a8c;" ></i> Preço:</label>
                 <br>
-                <div class="inputs-style"><input type="number" class="upload-price" placeholder="Ex: 35.00..."></div>
+                <div class="inputs-style"><input type="number" class="upload-price" placeholder="Ex: 35.00..." id="preco"></div>
             </div>
-            <div class="finish">
+            <div class="finish" onclick="upload()">
                 ADICIONAR
             </div>
             
