@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <script defer src="js/carrinho.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/adicionar.css">
+    <link rel="stylesheet" href="css/fontawesome-free-web/css/all.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/vovo.svg">
+                </a>
+                <div class="navbar-logo-text">
+                    <h1>CLEUDE STORE</h1>
+                </div>
+            </div>
+            <div class="search">
+               
+            </div>
+        </div>
+        <div class="navbar-right">
+    
+            <div class="dropdown">
+                <button class="dropbtn">MENU</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Produtos</a>
+                    <a href="carrinho.html">Carrinho</a>
+                    <a href="finalizar.html">Finalizar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="background-reference">
+        <div class="card" id="card">
+            <div class="title-1">
+                <b>Adicionar Produto</b>
+            </div>
+            <div class="inputs-form" id="img-upload">
+                <i class="fa-solid fa-image" style="color: #b71a8c;"></i> Imagem:
+                <label for="file-upload"class="custom-upload">
+                    
+                    <br>
+                    
+                    <div><i class="fa-solid fa-upload"style="color: #b71a8c;" id="icon-upload"></i></div>
+                    <div id="text-upload"><b>De upload de uma imagem(.png)</b></div>
+                    <div class="inputs-style"><input type="file" class="upload-img" id="file-upload" hidden></div>
+                </label>
+                
+                
+            </div>
+            <div class="inputs-form">
+                <label><i class="fa-solid fa-file-signature" style="color: #b71a8c;"></i> Nome:</label>
+                <br>
+                <div class="inputs-style"><input type="text" class="upload-name" placeholder="Ex: Coisa de Vó..."></div>
+            </div>
+
+            <div class="inputs-form">
+                <label><i class="fa-solid fa-money-bill" style="color: #b71a8c;" ></i> Preço:</label>
+                <br>
+                <div class="inputs-style"><input type="number" class="upload-price" placeholder="Ex: 35.00..."></div>
+            </div>
+            <div class="finish">
+                ADICIONAR
+            </div>
+            
+            
+            
+            
+        </div>
+    </div>
