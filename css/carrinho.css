@@ -50,6 +50,12 @@
     align-items: center;
     justify-content: center;
 }
+.img-space img{ 
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+}
 
 .product-name{
     width: 30%;
