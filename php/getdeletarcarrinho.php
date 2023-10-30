@@ -1,7 +1,7 @@
 <?php
-$id  = $_POST
-$con = mysqli_connect("localhost:3306", "root", "root", "cleude");
-$resultado = mysqli_query($con, `DELETE FROM carrinho WHERE produto_id = ${id}`);
 
-echo $resultado
+$con = mysqli_connect("localhost:3306", "root", "root", "cleude");
+$id  = $_POST["id_deletar"];
+$query = "DELETE FROM carrinho WHERE id_produto =" . $id;
+mysqli_query($con,$query);
 ?>
