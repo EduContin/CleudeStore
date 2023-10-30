@@ -208,12 +208,12 @@ function pix() {
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
 
     conteudo =
-    `<div>
+    `<div class="pix-titulo-container">
         <div class="pix-titulo">
             <h3 style="color:white;">Aqui esta o seu QR code</h3>
         </div>
     </div>
-    <div>
+    <div class="pix-imagem-container">
         <img class="pix-imagem" src="img/QRcode.png" alt="QR CODE do pix">
     </div>`;
     document.getElementById("tipo-pagamento").innerHTML = conteudo;
