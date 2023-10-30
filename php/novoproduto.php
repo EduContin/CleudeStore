@@ -8,7 +8,7 @@ if (isset($_FILES["arquivo"])) {
 
     # checagem da extensao da imagem e ve se os campos foram mandados nulos
     if($type == "image/png" && $nome != NULL && $preco != NULL){
-        $con = mysqli_connect("localhost:3306", "root", "SERVER1234", "cleude");
+        $con = mysqli_connect("localhost:3306", "root", "root", "cleude");
 
         $query = "INSERT INTO produtos(nome,preco) VALUES ('" . $nome . "', '" . $preco . "')";
         mysqli_query($con,$query);
