@@ -12,19 +12,23 @@ window.onload =  async function () {
         var price = dados[i].preco;
         var card = 
         `<div class="products">
-            <div class="img-space"><img src="img/produtos/${dados[i].id}.png"class="img-product"></div>
+            <div class="img-space"><img src="img/${id}.png"class="img-product"></div>
             <div class="product-name">${product_name}</div>
             <div class="price">R$:${price}</div>
 
-            <div class="remove" ><img src="img/delete.png" class="img-remove" onclick="deletar(${id})></div>    
+            <div class="remove" onclick="deletar(${id})">
+                <i class="fa-solid fa-trash"></i>
+            </div>    
         </div>`
         document.getElementById("card-produtos").innerHTML += card;
     }
 }
 async function deletar(id){
-    
-    var resposta = await fetch('php/getcarrinho.php',{
+    var dados = new FormData;
+    dados.append("id_deletar",id);
+    var resposta = await fetch('php/getdeletarcarrinho.php',{
         method:"POST",
-        id
+        body:dados
     });
+    location.reload()
 }
