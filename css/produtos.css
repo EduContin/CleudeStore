@@ -56,21 +56,6 @@
     
 }
 
-/* .produto-botao {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-
-    border-end-end-radius: 15px;
-    border-end-start-radius: 15px;
-
-    background-color: #b71a8c;
-
-    height: 75px;
-    width: 300px;
-    
-} */
-
 .produto-botao {
     height: 75px;
     width: 300px;
@@ -101,13 +86,38 @@
 }
 
 .search-bar {
-    width: 500px;
+    width: 380%;
     height: 30px;
 
     border-radius: 2.5px;
     border-width: 0;
 
     padding-inline: 2.5%;
+   
+}
 
+@media only screen and (max-width: 930px) {
+    .search-bar {
+        width: 260%;
+        height: 30px;
     
+        border-radius: 2.5px;
+        border-width: 0;
+    
+        padding-inline: 2.5%;
+       
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .search-bar {
+        width: 160%;
+        height: 30px;
+    
+        border-radius: 2.5px;
+        border-width: 0;
+    
+        padding-inline: 2.5%;
+       
+    }
 }
