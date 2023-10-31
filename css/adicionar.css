@@ -101,9 +101,19 @@
     transform: scale(1.05);
 }
 
-@media (max-width:600px){
+@media (max-width:450px){
 
-    .card{
-        width: 100%;
+    .title-1{
+        font-size: 170%;
     }
 }    
+@media (max-width:360px){
+
+    .title-1{
+        font-size: 120%;
+    }
+    #text-upload{
+        font-size: 70%;
+    }
+
+}
