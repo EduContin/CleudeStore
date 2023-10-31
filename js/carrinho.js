@@ -7,13 +7,16 @@ window.onload =  async function () {
     var dados = await resposta.json();
 
     for(var i=0; i< dados.length;i++){
-        var id = dados[i].id
+        var id = dados[i].id;
+        var quantidade = dados[i].quantidade;
         var product_name = dados[i].nome;
         var price = dados[i].preco;
         var card = 
         `<div class="products">
             <div class="img-space"><img src="img/produtos/${id}.png"class="img-product"></div>
+            
             <div class="product-name">${product_name}</div>
+            <input type="number" class="quantidade" value=${quantidade} id ="quant-${id}" onchange="quantidademudou(${id},document.getElementById('quant-${id}').value)"> 
             <div class="price">R$:${price}</div>
 
             <div class="remove" onclick="deletar(${id})">
@@ -31,4 +34,16 @@ async function deletar(id){
         body:dados
     });
     location.reload()
+}
+
+async function quantidademudou(id,quantidade){
+
+    var dados = new FormData;
+    dados.append("id_quantidade",id);
+    dados.append("quantidade",quantidade);
+    var resposta = await fetch('php/mudarquantidade.php',{
+        method:"POST",
+        body:dados
+    });
+
 }
