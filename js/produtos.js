@@ -72,4 +72,5 @@ function adicionar_ao_carrinho(id) {
         .then(response => response.json())
         .then(data => console.log(data))
         .catch((error) => console.error('Error:', error));
+    alert('Produto adicionado com sucesso!')
 }
