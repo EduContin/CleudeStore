@@ -72,6 +72,6 @@ function remover(id) {
         .then(response => response.json())
         .then(data => console.log(data))
         .catch((error) => console.error('Error:', error));
-
     location.reload()
+    
 }
