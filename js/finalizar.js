@@ -242,11 +242,11 @@ async function finalizar() {
         document.getElementById("botoes").innerHTML = conteudo;
     
         var conteudo = 
-        `<div class="finalizar-card">
-            <div class="finalizar-titulo">Obrigado por comprar na Cleude Store</div>
+        `<div class="finalizado-card">
+            <div class="finalizado-titulo">Obrigado por comprar na Cleude Store</div>
     
-            <div class="finalizar-baixo">
-                <a class="finalizar-botao" href="index.html">Ver mais produtos</a>
+            <div class="finalizado-baixo">
+                <a class="finalizado-botao" href="index.html">Ver mais produtos</a>
             </div>
         </div>`
     

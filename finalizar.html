@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link  rel="stylesheet" type="text/css" href="css/finalizar.css"/>
         <script defer src="js/finalizar.js"></script>
         <link rel="stylesheet" href="css/base.css">
@@ -35,13 +38,13 @@
         </nav>
 
         <div class="containers">
-            <div class="container-esquerda-espaco">
+            <div class="container-esquerda">
 
-                    <div class="container-esquerda">
+                    <div class="container-esquerda-card">
                         <div id="tipo-pagamento">
-                            <div class="metodo-pagamento">
+                            <h3 class="metodo-pagamento">
                                 Escolha um dos 3 metodos abaixo<br>
-                                 para efetuar o seu pagamento</div>
+                                 para efetuar o seu pagamento</h3>
                         </div>
                         <div id="botoes" class="botoes">
                             <button class="botao-opcoes-pagamento" type="button" onclick="credito_cartao()">Credito</button>
@@ -50,8 +53,9 @@
                         </div>
                     </div>
             </div>  
-            <div class="container-direita-espaco">
-                    <div class="container-direita">  
+            
+            <div class="container-direita">
+                    <div class="container-direita-card">  
                         <div id="pagamento-total">
                             <div class="espaco-pagamento">
                                 <div id ="espaco-produtos" class="espaco-produtos"></div>
@@ -59,12 +63,11 @@
                                 <div id="preco-total" class="preco-total"></div>
                             </div>
                         </div>
-                        <div class="pagamento-botao">
-                            <button class="botao-pagar" type="button" onclick="finalizar()">Finalizar</button>
+                        <div class="botao-finalizar">
+                            <button class="botao-finalizar-button" type="button" onclick="finalizar()">Finalizar</button>
                         </div>
                     </div>
             </div>    
         </div>
-
     </body>
 </html>
