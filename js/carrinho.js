@@ -29,7 +29,7 @@ window.onload =  async function () {
 async function deletar(id){
     var dados = new FormData;
     dados.append("id_deletar",id);
-    var resposta = await fetch('php/getdeletarcarrinho.php',{
+    var resposta = await fetch('php/deletarcarrinho.php',{
         method:"POST",
         body:dados
     });
